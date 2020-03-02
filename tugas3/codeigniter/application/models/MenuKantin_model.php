@@ -17,23 +17,7 @@ class MenuKantin_model extends CI_Model
     {
         return $this->db->get('menu')->result_array();
     }
-    // public function add_data()
-    // {
-    //     $kode_pesan = $this->input->post('kode_warung');
-    //     $nama_warung = $this->input->post('nama_warung');
-    //     $nama_menu = $this->input->post('nama_menu');
-    //     $harga = $this->input->post('harga');
-
-    //     $data = array(
-    //         'kode_warung' => $kode_pesan,
-    //         'nama_warung' => $nama_warung,
-    //         'nama_menu' => $nama_menu,
-    //         'harga' => $harga,
-    //     );
-
-    //     $this->menukantin_model->add_data($data, 'order');
-    //     redirect('codeigniter/index');
-    // }
+    
     function input_data($data){
         $this->db->insert('order',$data);
         //awale `order`
